@@ -20,8 +20,8 @@ pip install numpy
 
 Clone repository dan jalankan aplikasi:
 ```bash
-git clone https://github.com/cryer/monte-carlo-tree-search.git
-cd monte-carlo-tree-search
+git clone https://github.com/Walooni/monte_carlo_tree_search-tic-tac-toe.git
+cd monte_carlo_tree_search-tic-tac-toe
 python runV2.py
 ```
 
