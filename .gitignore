@@ -11,4 +11,4 @@ __pycache__
 build/
 dist/
 mctspy.egg-info/
-monte_carlo/
+venv*/

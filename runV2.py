@@ -5,7 +5,7 @@ from mcts.search import MonteCarloTreeSearch
 from tictactoe import TicTacToeGameState, TicTacToeMove
 
 board_size = 3
-depth = 1000
+iteration = 1000
 
 
 def draw_chessboard(board):
@@ -100,7 +100,7 @@ def init_state(starting_player: str):
         initial_board_state = TicTacToeGameState(state=state, next_to_move=TicTacToeGameState.x)
         root = MonteCarloTreeSearchNode(state=initial_board_state, parent=None)
         mcts = MonteCarloTreeSearch(root)
-        best_node = mcts.best_action(depth)  # jumlah simulasi MCTS
+        best_node = mcts.best_action(iteration)  # jumlah simulasi MCTS
         return best_node.state
     else:
         # manusia (O) mulai duluan, papan kosong
@@ -132,6 +132,6 @@ if __name__ == "__main__":
         board_state = TicTacToeGameState(state=current_state.board, next_to_move=TicTacToeGameState.x)
         root = MonteCarloTreeSearchNode(state=board_state, parent=None)
         mcts = MonteCarloTreeSearch(root)
-        best_computer_node = mcts.best_action(depth)
+        best_computer_node = mcts.best_action(iteration)
         current_state = best_computer_node.state
         draw_chessboard(current_state.board)
